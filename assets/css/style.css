@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/* Start button position and styling */
+
+.startBtn,
+.introBox,
+.quizCard,
+.resultsCard{
+   position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* Start button style */
+.startBtn button {
+background:    #ffffff;
+border:        1px solid #556699;
+border-radius: 1000px;
+padding:       20px 45px;
+color:         #000000;
+display:       inline-block;
+font:          normal normal 26px/1 "Calibri", sans-serif;
+text-align:    center;
+cursor: pointer;
+}
+
+
+
+/* Introdution card styling */
+.introCard {
+    opacity: 0;
+    width: 540px;
+    border: black solid 1px;
+    background-color: white;
+    border-radius: 10px;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+}
+
+.introCard .introTitle {
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid;
+    display: flex;
+    align-items: center;
+    padding: 0 35px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.introCard .introText {
+    padding: 25px 25px;
+}
+
+.introCard .buttons {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 35px;
+    border-top: 1px;
+}
+
+.introCard .buttons button {
+    margin: 0 5px;
+    height: 40px;
+    width: 100px;
+    border: 1px solid; 
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+/* Quiz Card styling */
+
+.quizCard {
+    opacity: 0;
+    width: 550px;
+    background: white;
+    border-radius: 10px;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+}
+
+.quizCard .questionText {
+    font-weight: bolder;
+    font-size: 30px;
+}
+/* Header for title and timer display  */
+.quizCard header {
+    height: 70px;
+    padding: 0 30px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quizCard header timer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px;
+}
+
+/* Question content display */
+
+.quizCard .section{
+    padding: 25px 30px 20px 30px;
+}
+
+.quizCard secion .answerChoices {
+    padding: 20px 0;
+    display: block;
+    
+}
+
+.quizCard .answerChoices .option {
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.quizCard .answerChoices .option:hover {
+    background-color:azure;
+}
+
+
+/* Footer with progress and next button to advance quiz */
+
+.quizCard footer {
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quizCard footer .totalQuestions span{
+    display: flex;
+
+}
+
+.quizCard footer .nextBtn button {
+    padding: 3px;
+    cursor: pointer;
+}
+
+/* Results card */
+.resultsCard {
+    opacity: 0;
+    background: white;
+    width: 450px;
+    padding: 25px 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+}

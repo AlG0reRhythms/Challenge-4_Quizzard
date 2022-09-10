@@ -4,29 +4,88 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Quizzard</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <script src="./assets/Javascript/script.js" defer></script>
   </head>
+
   <body>
-    <div class="container">
-      <div class="score">
-        <span id="user-score">0</span>
-        <span> / </span>
-        <div id="high-score">0</div>
+    <!-- Start button -->
+    <div class="startBtn"><button>Commence the Quizzening!</button></div>
+
+    <!-- Intro Box -->
+    <div class="introCard">
+      <div class="introTitle">
+        <span>Welcome to Quizzard!</span>
       </div>
-      <div class="content" #="question-card">
-        <div id="question-text"></div>
-        <div class="answer-options">
-          <button class="button answer-option" id="correct">Correct</button>
-          <button class="button answer-option" id="incorrect">Incorrect</button>
+      <div class="introText">
+        Are you a fullstack development student who's tired of confusing the
+        terms method and function? Would you like to add an event listener for
+        when you've finally understood all the complexities of JavaScript? Well,
+        you're in luck! The quizzard has devised a little game to help you do
+        just that!
+      </div>
+      <div class="buttons">
+        <button class="quit">I'm scared! Get me outta here!</button>
+        <button class="continue">Continue</button>
+      </div>
+    </div>
+
+    <!-- Quiz card -->
+    <div class="quizCard">
+      <header>
+        <div class="title">Quizzard</div>
+        <div class="timer">
+          <div class="timeText">Time remaining:</div>
+          <div class="timerSec">15</div>
         </div>
-        <div class="controls">
-          <button class="button restart-button">Restart</button>
-          <button class="button previous-button">Previous</button>
-          <button class="button next-button">Next</button>
-          <button class="button submit-button">Submit</button>
+      </header>
+      <section>
+        <div class="questionText">
+          <span>What is a method?</span>
         </div>
+        <div class="answerChoices">
+          <div class="option">
+            <span>a member of the Wu-Tang Clan</span>
+          </div>
+          <div class="option">
+            <span
+              >a method is a function that is specifically associated with an
+              object</span
+            >
+          </div>
+          <div class="option">
+            <span>a collection of items</span>
+          </div>
+          <div class="option">
+            <span>a way in which we can traverse the DOM</span>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="totalQuestions">
+          <span
+            ><p>2</p>
+            of
+            <p>5</p>
+            Questions</span
+          >
+        </div>
+        <div class="nextBtn"><button>Next</button></div>
+      </footer>
+    </div>
+
+    <!-- Game Over -->
+    <div class="resultsCard">
+      <div class="GameOverText">You're all finished!</div>
+      <div class="finalScore">
+        <span
+          >You got
+          <p>2</p>
+          out of 10 questions correct!</span
+        >
+      </div>
+      <div class="buttons">
+        <button class="restart">Try again?</button>
       </div>
     </div>
   </body>
