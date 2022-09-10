@@ -9,6 +9,17 @@
   </head>
 
   <body>
+    <!-- Top bar for logo and stuff -->
+
+    <div id="topbar">
+      <div id="high-score-display">High score:</div>
+      <h2>
+        <img src="./assets/images/Logo.png" alt="" />Welcome to Quizzard!
+        <img src="./assets/images/Logo.png" alt="" />
+      </h2>
+      <div id="timer">Time left:</div>
+    </div>
+
     <!-- Start button -->
     <div class="startBtn"><button>Commence the Quizzening!</button></div>
 
@@ -36,15 +47,15 @@
         <div class="title">Quizzard</div>
         <div class="timer">
           <div class="timeText">Time remaining:</div>
-          <div class="timerSec">15</div>
+          <!-- <div class="timerSec">15</div> -->
         </div>
       </header>
       <section>
         <div class="questionText">
-          <span>What is a method?</span>
+          <!-- <span>What is a method?</span> -->
         </div>
         <div class="answerChoices">
-          <div class="option">
+          <!-- <div class="option">
             <span>a member of the Wu-Tang Clan</span>
           </div>
           <div class="option">
@@ -58,7 +69,7 @@
           </div>
           <div class="option">
             <span>a way in which we can traverse the DOM</span>
-          </div>
+          </div> -->
         </div>
       </section>
       <footer>
@@ -66,7 +77,7 @@
           <span
             ><p>2</p>
             of
-            <p>5</p>
+            <p>10</p>
             Questions</span
           >
         </div>
@@ -88,5 +99,8 @@
         <button class="restart">Try again?</button>
       </div>
     </div>
+
+    <script src="./assets/Javascript/questionBank.js"></script>
+    <script src="./assets/Javascript/script.js"></script>
   </body>
 </html>
