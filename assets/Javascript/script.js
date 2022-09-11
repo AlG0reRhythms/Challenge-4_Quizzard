@@ -35,11 +35,13 @@ function startCountdown() {
 continueButton.onclick = () => {
   introCard.classList.remove("show");
   quizCard.classList.add("show");
-  showQuestion(1);
+  showQuestion(0);
+  questionCounter(1);
   startCountdown();
 };
 
 let questionCount = 0;
+let questionNum = 1;
 
 const nextButton = quizCard.querySelector(".nextBtn");
 
@@ -48,7 +50,9 @@ const nextButton = quizCard.querySelector(".nextBtn");
 nextButton.onclick = () => {
   if (questionCount < questionBank.length - 1) {
     questionCount++;
+    questionNum++;
     showQuestion(questionCount);
+    questionCounter(questionNum);
   } else {
     console.log("questions completed");
   }
@@ -59,6 +63,7 @@ function showQuestion(index) {
   const questionText = document.querySelector(".questionText");
   const answerChoices = document.querySelector(".answerChoices");
   let questionTag = "<span>" + questionBank[index].question + "</span>";
+  //declare multiple choice options linked to questionBank.js
   let answerChoicesTag =
     '<div class="option">' +
     questionBank[index].options[0] +
@@ -75,7 +80,33 @@ function showQuestion(index) {
 
   questionText.innerHTML = questionTag;
   answerChoices.innerHTML = answerChoicesTag;
+  //onclick for user selection
+  const choice = answerChoices.querySelectorAll(".option");
+  for (let i = 0; i < choice.length; i++) {
+    choice[i].setAttribute("onclick", "answerSelected(this)");
+  }
 }
+
+function answerSelected(answer) {
+  let userAnswer = answer.textContent;
+  let correctAnswer = questionBank[questionCount].answer;
+  if (userAnswer == correctAnswer) {
+    console.log("answer is correct");
+  } else {
+    console.log("answer is incorrect");
+  }
+  console.log(userAnswer);
+}
+
+//quiz progress counter
+
+function questionCounter(index) {
+  const progressCounter = quizCard.querySelector(".quizProgress");
+  let progressDenominator =
+    "<span><p>" + index + "</p>of<p>" + questionBank.length + "</p></span>";
+  progressCounter.innerHTML = progressDenominator;
+}
+
 //if answer is incorrect, highlight chosen answer in red, decrement timer by 20 seconds and continue to next question
 
 //if answer is correct, highlight chosen answer in green, and continue to the next question

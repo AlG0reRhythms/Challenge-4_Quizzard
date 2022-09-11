@@ -8,7 +8,7 @@ let questionBank = [
       "a method is a function that is specifically associated with an object.",
     options: [
       "a member of the Wu-Tang Clan",
-      "a method is a function that is specifically associated with an object",
+      "a method is a function that is specifically associated with an object.",
       "a collection of items",
       "a way in which we can traverse the DOM",
     ],
@@ -53,7 +53,7 @@ let questionBank = [
   {
     no: 5,
     question: "Which of the following is NOT correct about DOM nodes",
-    answer: "All the nodes of a ODM tree ust be of the same type",
+    answer: "All the nodes of a ODM tree must be of the same type",
     options: [
       "All the nodes of a DOM tree must be of the same type.",
       "The root node is the top-most node of the DOM tree.",

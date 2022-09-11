@@ -165,7 +165,7 @@ cursor: pointer;
     justify-content: space-between;
 }
 
-.quizCard footer .totalQuestions span{
+.quizCard footer .quizProgress span{
     display: flex;
 
 }
