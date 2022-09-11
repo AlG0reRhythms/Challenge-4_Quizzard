@@ -3,41 +3,41 @@
 let questionBank = [
   {
     no: 1,
-    question: "What is a method?",
+    question: "What is the benefit of the .addEventListener() method?",
     answer:
-      "a method is a function that is specifically associated with an object.",
+      "The .addEventListener() method is good for large code and it can be used to add multiple event handlers to a specific event.",
     options: [
-      "a member of the Wu-Tang Clan",
-      "a method is a function that is specifically associated with an object.",
-      "a collection of items",
-      "a way in which we can traverse the DOM",
+      "the .addEventListener() method must be paired with a .removeEventListener() method.",
+      "The .addEventListener() method is only useful for large code.",
+      "The .addEventListener() method can use anonymous functions.",
+      "The .addEventListener() method is good for large code and it can be used to add multiple event handlers to a specific event.",
     ],
   },
   {
     no: 2,
-    question:
-      "Which Javascript method can return the first element that matches a specified selector?",
-    answer: ".querySelector()",
+    question: "What is an event on the web?",
+    answer:
+      "Events are user interactions and browser manipulations on the document object model.",
     options: [
-      ".removeAttribute()",
-      ".querySelector()",
-      ".removeChild()",
-      ".getElementById()",
+      "Events are interactions between the client device and a server.",
+      "Parties that people can go to on the internet",
+      "Yes, the click and mousedown events fire the same way.",
+      "Events are user interactions and browser manipulations on the document object model.",
     ],
   },
   {
     no: 3,
     question:
-      "Which of the given statements is true regarding the JavaScript document object?",
-    answer:
-      "the document object provides a JavaScript interface to access the DOM.",
+      "Which Javascript method can return the first element that matches a specified selector?",
+    answer: ".querySelector()",
     options: [
-      "the document object provides a shell interface to access the DOM.",
-      "the document object provides an SQL interface to access the DOM.",
-      "the document object provides a JavaScript interface to access the DOM.",
-      "the document object provides an interface to browse the webpage.",
+      ".querySelectorAll()",
+      ".getElementByClass()",
+      ".querySelector()",
+      ".getElementById()",
     ],
   },
+
   {
     no: 4,
     question: "Which of the following is true about DOM nodes",
@@ -53,7 +53,7 @@ let questionBank = [
   {
     no: 5,
     question: "Which of the following is NOT correct about DOM nodes",
-    answer: "All the nodes of a ODM tree must be of the same type",
+    answer: "All the nodes of a DOM tree must be of the same type.",
     options: [
       "All the nodes of a DOM tree must be of the same type.",
       "The root node is the top-most node of the DOM tree.",
@@ -65,11 +65,11 @@ let questionBank = [
     no: 6,
     question:
       "Given 'const elem=document.body' what does the elem variable contain?",
-    answer: "it contains the text of the <body> element",
+    answer: "It contains the reference to the contents of the body element.",
     options: [
-      "It contains the text 'document body.",
-      "It contains the reference to the contents of the <body> element.",
+      "It contains the text 'document body'.",
       "It contains the location of the HTML document.",
+      "It contains the reference to the contents of the body element.",
       "It contrains no value.",
     ],
   },
@@ -93,7 +93,7 @@ let questionBank = [
     options: [
       "(paragraph).innerHTML = 'Hello World!';",
       "document.getElementById('paragraph').style.display = 'Hello World!';",
-      "document.getElementById('paragraph').innerHTML = 'Hello World!'",
+      "document.getElementById('paragraph').innerHTML = 'Hello World!';",
       "document.getElementById('paragraph')= 'Hello World!';",
     ],
   },

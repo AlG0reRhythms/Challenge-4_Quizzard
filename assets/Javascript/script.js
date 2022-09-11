@@ -41,7 +41,7 @@ continueButton.onclick = () => {
 };
 
 let questionCount = 0;
-let questionNum = 1;
+let currentQuestionNum = 1;
 
 const nextButton = quizCard.querySelector(".nextBtn");
 
@@ -50,9 +50,9 @@ const nextButton = quizCard.querySelector(".nextBtn");
 nextButton.onclick = () => {
   if (questionCount < questionBank.length - 1) {
     questionCount++;
-    questionNum++;
+    currentQuestionNum++;
     showQuestion(questionCount);
-    questionCounter(questionNum);
+    questionCounter(currentQuestionNum);
   } else {
     console.log("questions completed");
   }
