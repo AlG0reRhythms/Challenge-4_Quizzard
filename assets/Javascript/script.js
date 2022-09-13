@@ -6,6 +6,7 @@ const continueButton = document.querySelector(".buttons .continue");
 const quizCard = document.querySelector(".quizCard");
 const timerEl = document.querySelector(".timer");
 let secondsLeft = 180;
+const answerChoices = document.querySelector(".answerChoices");
 
 //When start button is clicked...show the introduction card
 
@@ -44,7 +45,8 @@ let questionCount = 0;
 let currentQuestionNum = 1;
 
 const nextButton = quizCard.querySelector(".nextBtn");
-
+const resultsCard = document.querySelector(".resultsCard");
+const restartQuiz = document.querySelector(".buttons restart");
 //If next button is clicked...
 
 nextButton.onclick = () => {
@@ -53,8 +55,11 @@ nextButton.onclick = () => {
     currentQuestionNum++;
     showQuestion(questionCount);
     questionCounter(currentQuestionNum);
+    nextButton.style.display = "none";
   } else {
     console.log("questions completed");
+    showResultsCard();
+    nextButton.style.display = "none";
   }
 };
 
@@ -80,6 +85,7 @@ function showQuestion(index) {
 
   questionText.innerHTML = questionTag;
   answerChoices.innerHTML = answerChoicesTag;
+
   //onclick for user selection
   const choice = answerChoices.querySelectorAll(".option");
   for (let i = 0; i < choice.length; i++) {
@@ -90,12 +96,32 @@ function showQuestion(index) {
 function answerSelected(answer) {
   let userAnswer = answer.textContent;
   let correctAnswer = questionBank[questionCount].answer;
+  let thereCanOnlyBeOne = answerChoices.children.length;
   if (userAnswer == correctAnswer) {
-    console.log("answer is correct");
+    answer.classList.add("correct");
   } else {
-    console.log("answer is incorrect");
+    answer.classList.add("incorrect");
   }
-  console.log(userAnswer);
+
+  //if a user selects an incorrect answer, they will see the correct one
+  for (let i = 0; i < thereCanOnlyBeOne; i++) {
+    if (answerChoices.children[i].textContent == correctAnswer) {
+      answerChoices.children[i].setAttribute("class", "option correct");
+    }
+  }
+  //disable all other choices after initial selection
+  for (let i = 0; i < thereCanOnlyBeOne; i++) {
+    answerChoices.children[i].classList.add("disabled");
+  }
+  nextButton.style.display = "block";
+}
+
+//display score card after all questions have been answered
+
+function showResultsCard() {
+  introCard.classList.remove("show");
+  quizCard.classList.remove("show");
+  resultsCard.classList.add("show");
 }
 
 //quiz progress counter

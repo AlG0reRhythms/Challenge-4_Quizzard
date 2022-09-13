@@ -7,15 +7,15 @@
 
 /* Top bar */
 #topbar {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
 
 img {
-	height: 5rem;
+    height: 5rem;
     margin-top: 15px;
 }
 
@@ -25,15 +25,15 @@ img {
 .startBtn,
 .introCard,
 .quizCard,
-.resultsCard{
-   position: absolute;
-    top:50%;
-    left:50%;
+.resultsCard {
+    position: absolute;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
 }
 
 .introCard.show,
-.quizCard.show{
+.quizCard.show {
     opacity: 1;
     pointer-events: auto;
     transform: translate(-50%, -50%) scale(1);
@@ -42,15 +42,15 @@ img {
 
 /* Start button style */
 .startBtn button {
-background:    #ffffff;
-border:        1px solid #556699;
-border-radius: 1000px;
-padding:       20px 45px;
-color:         #000000;
-display:       inline-block;
-font:          normal normal 26px/1 "Calibri", sans-serif;
-text-align:    center;
-cursor: pointer;
+    background: #ffffff;
+    border: 1px solid #556699;
+    border-radius: 1000px;
+    padding: 20px 45px;
+    color: #000000;
+    display: inline-block;
+    font: normal normal 26px/1 "Calibri", sans-serif;
+    text-align: center;
+    cursor: pointer;
 }
 
 
@@ -94,7 +94,7 @@ cursor: pointer;
     margin: 0 5px;
     height: 40px;
     width: 100px;
-    border: 1px solid; 
+    border: 1px solid;
     border-radius: 10px;
     cursor: pointer;
 }
@@ -115,6 +115,7 @@ cursor: pointer;
     font-weight: bolder;
     font-size: 30px;
 }
+
 /* Header for title and timer display  */
 .quizCard header {
     height: 70px;
@@ -134,14 +135,14 @@ cursor: pointer;
 
 /* Question content display */
 
-.quizCard .section{
+.quizCard .section {
     padding: 25px 30px 20px 30px;
 }
 
 .quizCard secion .answerChoices {
     padding: 20px 0;
     display: block;
-    
+
 }
 
 .quizCard .answerChoices .option {
@@ -152,9 +153,22 @@ cursor: pointer;
 }
 
 .quizCard .answerChoices .option:hover {
-    background-color:azure;
+    background-color: azure;
 }
 
+/* Class additions for correct and incorrect */
+
+.answerChoices .option.correct {
+    color: green;
+}
+
+.answerChoices .option.incorrect {
+    color: red;
+}
+
+.answerChoices .option.disabled {
+    pointer-events: none;
+}
 
 /* Footer with progress and next button to advance quiz */
 
@@ -165,14 +179,15 @@ cursor: pointer;
     justify-content: space-between;
 }
 
-.quizCard footer .quizProgress span{
+.quizCard footer .quizProgress span {
     display: flex;
 
 }
 
-.quizCard footer .nextBtn button {
+footer .quizCard footer .nextBtn button {
     padding: 3px;
     cursor: pointer;
+    display: none;
 }
 
 /* Results card */
