@@ -4,6 +4,8 @@
 
 - This is a quiz application with questions pertaining to Javascript and traversing the DOM. It contains ten questions, that will initiate upon selection of the start button located on the landing page. I put a lot of work into this, and it's still incomplete. There is a working timer that is linked to the start of the quiz, but there is still some missing functionality pertaining to local storage for high score keeping and decrementing the timer on an incorrect answer key. But hey, I'm still learnng and this is really difficult. I gave it my best shot and will contiune to iterate on the project.
 
+![](https://github.com/AlG0reRhythms/Challenge-4_Quizzard/blob/main/assets/images/Screen%20Shot%202022-09-12%20at%2010.20.38%20PM.png?raw=true)
+
 ## Installation
 
 - If you're reading this, that means you already have access to the code pushed to git
